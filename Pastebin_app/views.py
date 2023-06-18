@@ -22,10 +22,10 @@ def createpost(request):
         }  
                 return render(request, 'Pastebin_app/index.html',context)  
 
-        else:
-            context = {
-    'n':reversed(textInput.objects.all()),   
-        }
+        
+        context = {
+        'n':reversed(textInput.objects.all()),   
+            }
         return render(request, 'Pastebin_app/index.html',context) 
  
 def layout(request, id1 ):

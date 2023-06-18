@@ -2,6 +2,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path("", include("Pastebin_app.urls")),
+    path("", include("CodeVault.urls")),
     path("admin/", admin.site.urls),
 ] 

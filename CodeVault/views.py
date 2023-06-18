@@ -8,7 +8,7 @@ def index(request):
     'n': reversed(textInput.objects.all()),   
         }
 
-    return render(request,"Pastebin_app/index.html",context)
+    return render(request,"CodeVault/index.html",context)
 
 def createpost(request):   
         if request.method == 'POST':
@@ -20,18 +20,18 @@ def createpost(request):
                 context = {
     'n':reversed(textInput.objects.all()),   
         }  
-                return render(request, 'Pastebin_app/index.html',context)  
+                return render(request, 'CodeVault/index.html',context)  
 
         
         context = {
         'n':reversed(textInput.objects.all()),   
             }
-        return render(request, 'Pastebin_app/index.html',context) 
+        return render(request, 'CodeVault/index.html',context) 
  
 def layout(request, id1 ):
      context = {
     'text': textInput.objects.get(id=id1),   
         }  
      if(request.method=="GET"):
-        return render (request, 'Pastebin_app/layout.html',context)   
+        return render (request, 'CodeVault/layout.html',context)     
 

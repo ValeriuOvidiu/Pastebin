@@ -8,7 +8,7 @@ def index(request):
     'n': reversed(textInput.objects.all()),   
         }
 
-    return render(request,"CodeVault/index.html",context)
+    return render(request,"TextProcesing/index.html",context)
 
 def createpost(request):   
         if request.method == 'POST':
@@ -20,18 +20,18 @@ def createpost(request):
                 context = {
     'n':reversed(textInput.objects.all()),   
         }  
-                return render(request, 'CodeVault/index.html',context)  
+                return render(request, 'TextProcesing/index.html',context)  
 
         
         context = {
         'n':reversed(textInput.objects.all()),   
             }
-        return render(request, 'CodeVault/index.html',context) 
+        return render(request, 'TextProcesing/index.html',context) 
  
 def layout(request, id1 ):
      context = {
     'text': textInput.objects.get(id=id1),   
         }  
      if(request.method=="GET"):
-        return render (request, 'CodeVault/layout.html',context)     
+        return render (request, 'TextProcesing/layout.html',context)     
 

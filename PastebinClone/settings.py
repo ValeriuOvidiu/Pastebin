@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CodeVault',
+    'TextProcesing',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -50,10 +51,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Pastebin_project.urls'
+ROOT_URLCONF = 'PastebinClone.urls'
 
 TEMPLATES = [
-    {
+    {   
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ["template"],
         'APP_DIRS': True,
@@ -68,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Pastebin_project.wsgi.application'
+WSGI_APPLICATION = 'PastebinClone.wsgi.application'  
 
 
 # Database

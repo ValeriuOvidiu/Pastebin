@@ -6,9 +6,10 @@
 </head>
 
 <body>
-    <div class="card" style="width: 40rem; position: absolute; left: 50; top: 50;">
-        <div class="card-body">
-    <h1>{{ text.textSaved }}</h1>
-        </div>
-    </div>
+    <a class="btn btn-primary mb-3" style=" position: absolute; left: 50; top: 20;" role="button" href={% url 'paste/create' %}><-</a>
+            <div class="card" style="width: 40rem; position: absolute; left: 50; top: 100;">
+                <div class="card-body">
+                    <h1>{{ text.textSaved }}</h1>
+                </div>
+            </div>
 </body>

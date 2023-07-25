@@ -21,26 +21,28 @@
                     <textarea cols="75" rows="15" name="content">
 </textarea><br />
                     <div class="card-footer bg-transparent border-success">
-                        <button class="btn btn-primary active" type="submit"> Save </button>
+                        <button class="btn btn-primary active" style=" position: absolute; left: 17;" type="submit"> Save </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-        <div class="card text-dark bg-light mb-3" style="width: 40rem; position: absolute; left: 700; top: 50; ">
-            <div class="card-header bg-transparent border-success"><h1>Posts</h1></div>
-            <div class="card-body">
+    <div class="card text-dark bg-light mb-3" style="width: 40rem; position: absolute; left: 700; top: 50; ">
+        <div class="card-header bg-transparent border-success">
+            <h1>Posts</h1>
+        </div>
+        <div class="card-body">
             <ul class="list-group">
                 {% for i in n %}
                 {% if i.textSaved|length > 9 %}
-                <li class="list-group-item" id="{{i.id}}"><a href="{% url 'paste' i.id %}"> {{ i.textSaved|slice:"0:9" }} ...</a></li>
+                <li class="list-group-item" id="{{i.id}}"><a href="{% url 'paste' i.id %}"> {{ i.textSaved|slice:"0:9"}} ...</a></li>
                 {% else %}
                 <li class="list-group-item" id="{{i.id}}">{{ i.textSaved }} </li>
                 {% endif %}
                 {% endfor %}
             </ul>
-            </div>
         </div>
+    </div>
 
 </body>
 

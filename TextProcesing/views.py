@@ -21,8 +21,6 @@ def createpost(request):
     'n':reversed(textInput.objects.all()),   
         }  
                 return render(request, 'TextProcesing/index.html',context)  
-
-        
         context = {
         'n':reversed(textInput.objects.all()),   
             }
